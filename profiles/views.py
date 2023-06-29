@@ -29,7 +29,6 @@ class ProfileList(generics.ListAPIView):
         'owner__username',
         'title',
         'category',
-        'occupation',
     ]
 
     ordering_fields = [

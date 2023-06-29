@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
 
-    CATEGORY_CHOICES = [
-        (food, 'Food'),
-        (drinks, 'Drinks'),
-        (restaurants, 'Restaurants'),
+    category_choices = [
+        ('food', 'Food'),
+        ('drinks', 'Drinks'),
+        ('restaurants', 'Restaurants'),
     ]
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -15,7 +15,10 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    category = models.CharField(choices=CATEGORY_CHOICES)
+    category = models.CharField(
+        max_length=255,
+        choices=category_choices,
+        default='food')
     image = models.ImageField(
         upload_to='images/', default='../default_post_rgq6aq', blank=True
     )

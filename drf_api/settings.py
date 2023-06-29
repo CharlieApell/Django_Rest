@@ -64,7 +64,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    'localhost',
+    '8000-charlieapel-pp5foodieap-nb1bvyvo2q5.ws-eu101.gitpod.io',
     ]
 
 if 'CLIENT_ORIGIN' in os.environ:
@@ -157,7 +157,7 @@ if 'DEV' in os.environ:
     }
 else:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL").encode())
     }
 
 

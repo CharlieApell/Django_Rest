@@ -5,6 +5,14 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
 
+    occupation_choices = [
+        ('food_enthusiast', 'Food Enthusiast'),
+        ('chef', 'Chef'),
+        ('bartender', 'Bartender'),
+        ('barista', 'Barista'),
+        ('home_cook', 'Home Cook'),
+    ]
+
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -13,6 +21,10 @@ class Profile(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_profile_dkbtba'
     )
+    occupation = models.CharField(
+        max_length=255,
+        choices=occupation_choices,
+        default='food_enthusiast')
 
     class Meta:
         ordering = ['-created_at']

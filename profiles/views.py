@@ -20,15 +20,10 @@ class ProfileList(generics.ListAPIView):
         filters.OrderingFilter,
         DjangoFilterBackend,
     ]
+
     filterset_fields = [
         'owner__following__followed__profile',
         'owner__followed__owner__profile',
-    ]
-
-    search_fields = [
-        'owner__username',
-        'title',
-        'category',
     ]
 
     ordering_fields = [

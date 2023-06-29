@@ -24,6 +24,14 @@ class ProfileList(generics.ListAPIView):
         'owner__following__followed__profile',
         'owner__followed__owner__profile',
     ]
+
+    search_fields = [
+        'owner__username',
+        'title',
+        'category',
+        'occupation',
+    ]
+
     ordering_fields = [
         'posts_count',
         'followers_count',

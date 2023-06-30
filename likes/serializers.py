@@ -21,7 +21,7 @@ class LikeSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
-    
+
     def create(self, validated_data):
         try:
             return super().create(validated_data)

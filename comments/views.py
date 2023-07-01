@@ -16,7 +16,9 @@ class CommentList(generics.ListCreateAPIView):
     filterset_fields = ['post']
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+        serializer.save(
+            owner=self.request.user,
+            rating=self.request.data.get('rating'))
 
 
 class CommentDetail(generics.RetrieveUpdateDestroyAPIView):

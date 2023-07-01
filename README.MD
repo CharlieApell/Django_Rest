@@ -1,7 +1,5 @@
 # Foodie - API
-Foodie is a vibrant online community tailored for food enthusiasts. It serves as a platform where users can freely share captivating images of their delectable meals, tantalizing drinks, and exceptional restaurant recommendations. Embracing the spirit of culinary exploration, Foodie allows users to immerse themselves in a world of flavors and engage with like-minded individuals.
-
-Within this project, the backend API database has been meticulously crafted to provide robust support for the dynamic ReactJS frontend. Powered by the Django Rest Framework, it offers a seamless integration between the frontend and backend components, ensuring a smooth and enjoyable user experience. By leveraging this powerful technology stack, Foodie fosters an environment where users can connect, interact through likes, comments, and even follow fellow food enthusiasts.
+Foodie is an exciting online community for food enthusiasts. It utilizes the Django Rest Framework walkthrough from Code Institute as the foundation for its backend API and database. This integration seamlessly supports the dynamic ReactJS frontend, providing a smooth and enjoyable user experience. Foodie enables users to share enticing food images, discover new flavors, and engage with like-minded individuals through features like comments, likes, and following fellow food enthusiasts.
 
 #### [Deployed Backend API](https://drf-api-charlie.herokuapp.com/)
 #### [Deployed Frontend](https://pp5-capell-745fa2049c09.herokuapp.com/)
@@ -148,3 +146,12 @@ All Python files have been successfully passed through the PEP8 validator in git
 ### Media:
 - The Default Profile Image was used provided by CI during the course [Default Profile Image](https://codeinstitute.s3.amazonaws.com/ReactEssentials/DRF/Images/default_profile.jpg)
 - Default Post image from [Default Post Image](https://codeinstitute.s3.amazonaws.com/ReactEssentials/DRF/Images/default_post.jpg)
+
+
+## Acknowledgements
+
+I would like to acknowledge the following sources that have provided inspiration and guidance for the development of this project:
+
+- Code Institute's Django REST Framework Walkthrough: I want to acknowledge Code Institute's Django REST Framework Walkthrough for providing the initial code foundation. I have customized and adapted the code from the walkthrough to suit the specific needs of Foodie. The walkthrough has been instrumental in guiding me and providing valuable code snippets and concepts.
+
+- 

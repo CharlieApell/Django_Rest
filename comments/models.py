@@ -20,7 +20,7 @@ class Comment(models.Model):
     rating = models.CharField(
         max_length=255,
         choices=rating_choices,
-        default='3')
+        default='Neutral')
 
     class Meta:
         ordering = ['-created_at']

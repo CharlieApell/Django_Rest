@@ -65,6 +65,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     '8000-charlieapel-pp5foodieap-nb1bvyvo2q5.ws-eu101.gitpod.io',
+    'localhost',
     ]
 
 if 'CLIENT_ORIGIN' in os.environ:

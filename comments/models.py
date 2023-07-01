@@ -6,7 +6,6 @@ from posts.models import Post
 class Comment(models.Model):
 
     rating_choices = [
-        (0, ''),
         (1, 'Bad'),
         (2, 'Not good'),
         (3, 'Neutral'),
@@ -18,7 +17,7 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    rating = models.IntegerField(choices=rating_choices, default=0)
+    rating = models.IntegerField(choices=rating_choices, default=3)
 
     class Meta:
         ordering = ['-created_at']
